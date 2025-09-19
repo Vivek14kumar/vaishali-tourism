@@ -2,16 +2,16 @@
 import { useEffect, useState } from "react";
 import { Lato, Allerta } from "next/font/google";
 import Link from "next/link";
-//import img from "next/image";
+import Image from "next/image";
 
 const lato = Lato({subsets: ["latin"],weight: ["400", "700"],});
 const allerta = Allerta({ subsets: ["latin"], weight: "400" });
 
 export default function HeroSectionCard() {
   const cards = [
-    { img: "/images/vaishali.jpeg" },
-    { img: "/images/ashok-piller.jpeg" },
-    { img: "/images/relic.jpeg" },
+    { Image: "/images/vaishali.jpeg" },
+    { Image: "/images/ashok-piller.jpeg" },
+    { Image: "/images/relic.jpeg" },
   ];
 
   const [current, setCurrent] = useState(0);
@@ -25,7 +25,7 @@ export default function HeroSectionCard() {
 
   return (
     <section className="flex flex-col md:flex-row items-center justify-center min-h-screen px-4 md:px-6 overflow-hidden">
-      {/* Left Side - img Cards */}
+      {/* Left Side - Image Cards */}
       <div className="relative flex w-full md:w-1/2 justify-center items-center h-[300px] sm:h-[400px] md:h-[500px] overflow-visible">
         {cards.map((card, index) => {
           const isActive = index === current;
@@ -67,7 +67,7 @@ export default function HeroSectionCard() {
               key={index}
               className="absolute w-48 sm:w-56 md:w-64 h-72 sm:h-80 md:h-96 bg-cover bg-center rounded-2xl shadow-xl transition-all duration-1000 ease-in-out"
               style={{
-                backgroundImage: `url(${card.img})`,
+                backgroundImage: `url(${card.Image})`,
                 transform,
                 opacity,
                 zIndex,

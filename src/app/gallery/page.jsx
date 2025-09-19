@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Lato, Allerta } from "next/font/google";
 
 const lato = Lato({subsets: ["latin"],weight: ["400", "700"],});
@@ -28,7 +29,7 @@ export default function Gallery() {
     <div className="min-h-screen mt-20">
       {/* Hero Section */}
       <div className="relative h-[60vh] mb-12 rounded-xl">
-        <img
+        <Image
           src="/images/Budha_Stupa_Vaishali.jpg"
           alt="Vaishali Heritage"
           className="w-full h-full object-cover rounded-xl"
@@ -60,7 +61,7 @@ export default function Gallery() {
 
       {/* Gallery Grid */}
       <div className="max-w-6xl mx-auto px-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-        {images.map((img, index) => (
+        {images.map((Image, index) => (
           <motion.div
             key={index}
             whileHover={{ scale: 1.05 }}
@@ -68,16 +69,16 @@ export default function Gallery() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             className="relative group rounded-2xl overflow-hidden shadow-lg cursor-pointer"
-            onClick={() => setSelectedImg(img)}
+            onClick={() => setSelectedImg(Image)}
           >
-            <img
-              src={img.src}
-              alt={img.title}
+            <Image
+              src={Image.src}
+              alt={Image.title}
               className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition">
-              <h2 className={`${allerta.className} text-white text-lg font-semibold`}>{img.title}</h2>
-              <p className={`${lato.className} text-gray-200 text-sm`}>{img.desc}</p>
+              <h2 className={`${allerta.className} text-white text-lg font-semibold`}>{Image.title}</h2>
+              <p className={`${lato.className} text-gray-200 text-sm`}>{Image.desc}</p>
             </div>
           </motion.div>
         ))}
@@ -93,7 +94,7 @@ export default function Gallery() {
             >
               <X size={32} />
             </button>
-            <img
+            <Image
               src={selectedImg.src}
               alt={selectedImg.title}
               className="w-full max-h-[80vh] object-contain rounded-xl"

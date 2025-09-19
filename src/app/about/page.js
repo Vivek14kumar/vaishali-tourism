@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import img from "next/image";
+import Image from "next/image";
 import { MapPin } from "lucide-react";
 
 import { Lato, Allerta } from "next/font/google";
@@ -59,7 +59,7 @@ export default function About() {
             transition={{ type: "spring", stiffness: 200 }}
             className="bg-white/80 backdrop-blur-lg rounded-2xl p-6 shadow-lg hover:shadow-2xl transition relative overflow-hidden group"
           >
-            <img
+            <Image
               src="/images/buddha.jpg"
               alt="Buddhist Heritage"
               width={500}
@@ -83,7 +83,7 @@ export default function About() {
             transition={{ type: "spring", stiffness: 200 }}
             className="bg-white/80 backdrop-blur-lg rounded-2xl p-6 shadow-lg hover:shadow-2xl transition relative overflow-hidden group"
           >
-            <img
+            <Image
               src="/images/Lord_Mahavira.jpg"
               alt="Jain Heritage"
               width={500}

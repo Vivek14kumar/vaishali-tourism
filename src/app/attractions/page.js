@@ -1,6 +1,6 @@
 "use client";
 
-//import img from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { attractions } from "../data/attractions"; // ✅ use this, remove local const
@@ -50,9 +50,9 @@ export default function AttractionsPage() {
       variants={card}
       className="relative rounded-3xl overflow-hidden bg-white/70 backdrop-blur-md border border-emerald-100 shadow-lg transition-transform duration-300 hover:shadow-2xl hover:-translate-y-3 flex flex-col h-full"
     >
-      {/* img */}
+      {/* Image */}
       <div className="overflow-hidden">
-        <img
+        <Image
           src={place.image}   // ✅ changed
           alt={place.name}
           width={400}

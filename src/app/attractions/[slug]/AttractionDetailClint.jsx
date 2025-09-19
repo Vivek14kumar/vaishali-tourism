@@ -1,6 +1,6 @@
 "use client";
 
-import img from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -42,7 +42,7 @@ export default function AttractionDetailClient({ place }) {
       >
         {/* Hero Section */}
         <div className="relative w-full max-w-5xl mb-12">
-          <img
+          <Image
             src={place.image}
             alt={place.name}
             width={1200}
