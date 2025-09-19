@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+
+body {
+  background: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+:root {
+  --font-mozilla-headline: 'Mozilla Headline', sans-serif;
+}
+
+.mozilla-headline {
+  font-family: var(--font-mozilla-headline);
+}
+
