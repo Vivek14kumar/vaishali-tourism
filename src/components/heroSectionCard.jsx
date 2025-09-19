@@ -10,7 +10,7 @@ const allerta = Allerta({ subsets: ["latin"], weight: "400" });
 export default function HeroSectionCard() {
   const cards = [
     { img: "/images/vaishali.jpeg" },
-    { img: "/images/Ashok-piller.jpg" },
+    { img: "/images/ashok-piller.jpg" },
     { img: "/images/relic.jpeg" },
   ];
 
