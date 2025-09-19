@@ -18,7 +18,7 @@ const images = [
   { src: "/images/Mahavir-temple.jpeg", title: "Jain Temple", desc: "Sacred birthplace of Lord Mahavira, 24th Tirthankara." },
   { src: "/images/buddha-samyak.jpeg", title: "Buddha Samyak", desc: "Celebration of Buddhist teachings and culture." },
   { src: "/images/buddha-samyak1.jpeg", title: "Buddha Samyak", desc: "Grand annual Buddhist congregation in Vaishali." },
-  { src: "/images/vaishali-1.jpg", title: "Vaishali Museum", desc: "Preserves artifacts from Vaishali’s glorious past." },
+  { src: "/images/vaishali-1.jpeg", title: "Vaishali Museum", desc: "Preserves artifacts from Vaishali’s glorious past." },
 ];
 
 export default function Gallery() {
