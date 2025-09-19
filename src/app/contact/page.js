@@ -49,7 +49,7 @@ export default function Contact() {
           Get in Touch
         </h2>
         <p className={`${allerta.className} text-center text-gray-500 mb-8`}>
-          We'd love to hear from you! Fill out the form below.
+          {`We'd love to hear from you! Fill out the form below.`}
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">

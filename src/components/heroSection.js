@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Landmark, Camera, Sun } from "lucide-react";
 import { Allerta } from "next/font/google";
+import Image from "next/image";
 
 const allerta = Allerta({ subsets: ["latin"], weight: "400" });
 
@@ -19,7 +20,7 @@ export default function HeroSection() {
     >
       {/* Full-screen background image */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/images/vaishali.jpeg" // replace with your hero image
           alt="Vaishali"
           className="w-full h-full object-cover object-center"

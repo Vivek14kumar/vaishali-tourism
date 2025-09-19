@@ -32,6 +32,8 @@ export default function Gallery() {
         <Image
           src="/images/Budha_Stupa_Vaishali.jpg"
           alt="Vaishali Heritage"
+          width={400}
+          height={300}
           className="w-full h-full object-cover rounded-xl"
         />
         <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center rounded-xl">
@@ -61,7 +63,7 @@ export default function Gallery() {
 
       {/* Gallery Grid */}
       <div className="max-w-6xl mx-auto px-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-        {images.map((Image, index) => (
+        {images.map((img, index) => (
           <motion.div
             key={index}
             whileHover={{ scale: 1.05 }}
@@ -69,16 +71,18 @@ export default function Gallery() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             className="relative group rounded-2xl overflow-hidden shadow-lg cursor-pointer"
-            onClick={() => setSelectedImg(Image)}
+            onClick={() => setSelectedImg(img)}
           >
             <Image
-              src={Image.src}
-              alt={Image.title}
+              src={img.src}
+              alt={img.title}
+              width={400}
+              height={200}
               className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition">
-              <h2 className={`${allerta.className} text-white text-lg font-semibold`}>{Image.title}</h2>
-              <p className={`${lato.className} text-gray-200 text-sm`}>{Image.desc}</p>
+              <h2 className={`${allerta.className} text-white text-lg font-semibold`}>{img.title}</h2>
+              <p className={`${lato.className} text-gray-200 text-sm`}>{img.desc}</p>
             </div>
           </motion.div>
         ))}
@@ -97,6 +101,8 @@ export default function Gallery() {
             <Image
               src={selectedImg.src}
               alt={selectedImg.title}
+              width={400}
+              height={200}
               className="w-full max-h-[80vh] object-contain rounded-xl"
             />
             <p className="text-center text-white mt-4 text-lg font-semibold">
