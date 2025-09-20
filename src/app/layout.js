@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Head from 'next/head'
+import { Analytics } from "@vercel/analytics/next"
 
 const mozillaHeadline = localFont({
   src: "../../public/fonts/MozillaHeadline-VariableFont_wdth,wght.ttf",
@@ -56,6 +57,7 @@ export default function RootLayout({ children }) {
         {/* Responsive main content */}
         <main className="flex-1 w-full px-2 sm:px-4 md:px-6 lg:px-8 xl:px-12 bg-gradient-to-b from-emerald-50 to-white">
           {children}
+          <Analytics />   {/* Add Analytics here */}
         </main>
 
         {/* Footer at bottom */}
