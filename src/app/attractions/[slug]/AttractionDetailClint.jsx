@@ -171,7 +171,7 @@ export default function AttractionDetailClient({ place }) {
             </motion.div>
 
             {/* Back Button */}
-            <Link href="/attractions">
+            <Link rel='canonical' href="/attractions">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

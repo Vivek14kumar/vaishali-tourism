@@ -44,7 +44,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <Link href={"/"}>
+          <Link rel='canonical' href={"/"}>
             <Image
               src="/images/vaishalitourism-logo.svg"
               alt="Vaishali Tourism Logo"
@@ -65,7 +65,7 @@ export default function Navbar() {
                 whileTap={{ scale: 0.95 }}
                 className="relative"
               >
-                <Link
+                <Link rel='canonical'
                   href={link.href}
                   className="px-3 py-2 font-medium text-white/90 relative group"
                 >

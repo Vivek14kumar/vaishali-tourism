@@ -46,8 +46,8 @@ export default function ExploreMore() {
           <h1 className="text-3xl md:text-5xl font-serif leading-tight">Discover the Timeless Heritage of Vaishali</h1>
           <p className="mt-4 text-sm md:text-lg max-w-xl">From ancient democracy to serene Buddhist relics — explore landscapes, cuisine, and living traditions.</p>
           <div className="mt-6 flex gap-3">
-            <Link href="#plan" className="inline-block bg-amber-500 text-black px-5 py-3 rounded-md font-semibold shadow">Plan Your Visit</Link>
-            <Link href="#highlights" className="inline-block bg-white bg-opacity-10 px-5 py-3 rounded-md border border-white/20">Explore Highlights</Link>
+            <Link rel='canonical' href="#plan" className="inline-block bg-amber-500 text-black px-5 py-3 rounded-md font-semibold shadow">Plan Your Visit</Link>
+            <Link rel='canonical' href="#highlights" className="inline-block bg-white bg-opacity-10 px-5 py-3 rounded-md border border-white/20">Explore Highlights</Link>
           </div>
         </div>
       </section>
@@ -78,7 +78,7 @@ export default function ExploreMore() {
               <div className="p-4">
                 <h3 className="font-semibold">{a.title}</h3>
                 <p className="mt-2 text-sm text-gray-600">{a.blurb}</p>
-                <Link href="#" className="mt-3 inline-block text-amber-600 text-sm">Read more →</Link>
+                <Link rel='canonical' href="#" className="mt-3 inline-block text-amber-600 text-sm">Read more →</Link>
               </div>
             </div>
           ))}
@@ -172,7 +172,7 @@ export default function ExploreMore() {
               <h3 className="text-2xl md:text-4xl font-serif">Ready to explore Vaishali?</h3>
               <p className="mt-3 text-sm md:text-base">Plan your itinerary, book guided tours, or find the best local food spots.</p>
               <div className="mt-4">
-                <Link href="#plan" className="inline-block bg-amber-400 text-black px-5 py-3 rounded-md font-semibold">Book Your Journey</Link>
+                <Link rel='canonical' href="#plan" className="inline-block bg-amber-400 text-black px-5 py-3 rounded-md font-semibold">Book Your Journey</Link>
               </div>
             </div>
           </div>
@@ -183,9 +183,9 @@ export default function ExploreMore() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm">© {new Date().getFullYear()} Vaishali Tourism</p>
           <nav className="flex gap-4 text-sm">
-            <Link href="#highlights">Highlights</Link>
-            <Link href="#plan">Plan</Link>
-            <Link href="#">Contact</Link>
+            <Link rel='canonical' href="#highlights">Highlights</Link>
+            <Link rel='canonical' href="#plan">Plan</Link>
+            <Link rel='canonical' href="#">Contact</Link>
           </nav>
         </div>
       </footer>

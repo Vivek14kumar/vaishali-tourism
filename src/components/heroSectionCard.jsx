@@ -89,7 +89,7 @@ export default function HeroSectionCard() {
           waiting for you.
         </p>
         <div className="mt-6 sm:mt-8 flex gap-4 flex-wrap justify-center">
-          <Link href={"/attractions"}>
+          <Link rel='canonical' href={"/attractions"}>
             <button
               onClick={() => scrollToSection("attractions")}
               className={` ${lato.className} px-6 sm:px-8 py-3 sm:py-4 text-lg sm:text-xl rounded-full shadow-xl bg-gradient-to-r from-green-600 to-green-400 text-white font-semibold hover:scale-105 transition-transform duration-300`}
@@ -97,7 +97,7 @@ export default function HeroSectionCard() {
               Explore More
             </button>
           </Link>
-          <Link href={"/plan-your-visit"}>
+          <Link rel='canonical' href={"/plan-your-visit"}>
             <button
               //onClick={() => scrollToSection("plan")}
               className={`${lato.className} px-6 sm:px-8 py-3 sm:py-4 text-lg sm:text-xl rounded-full shadow-xl bg-white text-green-700 font-semibold hover:scale-105 transition-transform duration-300`}

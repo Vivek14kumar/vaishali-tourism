@@ -45,7 +45,7 @@ export default function AttractionsPage() {
         className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto"
       >
         {attractions.map((place, i) => (
-  <Link key={i} href={`/attractions/${place.slug}`} className="group block">
+  <Link rel='canonical' key={i} href={`/attractions/${place.slug}`} className="group block">
     <motion.div
       variants={card}
       className="relative rounded-3xl overflow-hidden bg-white/70 backdrop-blur-md border border-emerald-100 shadow-lg transition-transform duration-300 hover:shadow-2xl hover:-translate-y-3 flex flex-col h-full"

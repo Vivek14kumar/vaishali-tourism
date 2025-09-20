@@ -47,7 +47,7 @@ export default function CallToAction() {
         awaits you with open arms.
       </motion.p>
       
-      <Link href={"/attractions"}>    
+      <Link rel='canonical' href={"/attractions"}>    
         <motion.button
           whileHover={{ scale: 1.05 }}
           className={`${allerta.className} relative z-20 px-6 sm:px-8 py-3 sm:py-4 text-lg sm:text-xl rounded-full border border-white text-black font-semibold shadow-lg hover:bg-gray-100 transition backdrop-blur-xs`}
