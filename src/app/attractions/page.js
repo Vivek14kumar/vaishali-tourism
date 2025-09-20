@@ -24,6 +24,12 @@ const card = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
+export const metadata = {
+  title: "Top Attractions in Vaishali | Vaishali Tourism",
+  description:
+    "Explore the top attractions in Vaishali including Ashokan Pillar, Mahavir Jain Mandir, and Buddha Samyak Darshan Museum.",
+};
+
 export default function AttractionsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 py-20 px-6">

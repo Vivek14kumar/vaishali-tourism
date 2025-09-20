@@ -11,15 +11,35 @@ const mozillaHeadline = localFont({
 });
 
 export const metadata = {
-  title: "Vaishali Tourism - Bihar",
+  title: "Vaishali Tourism",
   description:
-    "Discover Vaishali, a Buddhist pilgrimage and historic site in Bihar.",
+    "Vaishali tourism, Vaishali travel guide, Vaishali historical places, Discover Vaishali, a Buddhist pilgrimage and historic site in Bihar.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${mozillaHeadline.variable}`}>
-       
+        <head>
+          {/* Example: Tourist Attraction Structured Data */}
+          <Script id="tourist-attraction-schema" type="application/ld+json">
+            {`
+              {
+                "@context": "https://schema.org",
+                "@type": "TouristAttraction",
+                "name": "Ashokan Pillar",
+                "description": "Historical Ashokan Pillar located in Vaishali, Bihar.",
+                "image": "https://www.vaishalitourism.in/images/ashokan-pillar.jpg",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Vaishali",
+                  "addressRegion": "Bihar",
+                  "addressCountry": "IN"
+                },
+                "openingHours": "Mo-Su 09:00-18:00"
+              }
+            `}
+          </Script>
+        </head>
       <body className="flex flex-col min-h-screen ">
         {/* Navbar fixed to top or static */}
         <Navbar />
