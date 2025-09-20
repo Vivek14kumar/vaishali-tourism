@@ -2,6 +2,7 @@ import "../style/globals.css";
 import localFont from "next/font/local";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import Head from 'next/head'
 
 const mozillaHeadline = localFont({
   src: "../../public/fonts/MozillaHeadline-VariableFont_wdth,wght.ttf",
@@ -19,9 +20,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${mozillaHeadline.variable}`}>
-      <head>
+      <Head>
         <link rel="canonical" href="https://vaishalitourism.in/" />
-      </head>
+      </Head>
       <body className="flex flex-col min-h-screen ">
         {/* Navbar fixed to top or static */}
         <Navbar />
