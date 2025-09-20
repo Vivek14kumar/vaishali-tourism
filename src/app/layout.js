@@ -11,7 +11,7 @@ const mozillaHeadline = localFont({
 });
 
 export const metadata = {
-  title: "Vaishali Tourism",
+  title: "Vaishali Tourism - Travel Guide & Historical Places",
   description:
     "Vaishali tourism, Vaishali travel guide, Vaishali historical places, Discover Vaishali, a Buddhist pilgrimage and historic site in Bihar.",
 };

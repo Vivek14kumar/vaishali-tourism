@@ -45,11 +45,11 @@ export default function Contact() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 via-white to-green-100 px-6 py-12">
       <div className="max-w-xl w-full bg-white shadow-xl rounded-3xl p-10">
-        <h2 className="mozilla-headline text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 text-center mb-4">
+        <h1 className="mozilla-headline text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 text-center mb-4">
           Get in Touch
-        </h2>
+        </h1>
         <p className={`${allerta.className} text-center text-gray-500 mb-8`}>
-          {`We'd love to hear from you! Fill out the form below.`}
+          {`We’d love to hear from you! Fill out the form to explore Vaishali’s historical sites, temples, and museums with ease.`}
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
