@@ -19,27 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${mozillaHeadline.variable}`}>
-        <head>
-          {/* Example: Tourist Attraction Structured Data */}
-          <Script id="tourist-attraction-schema" type="application/ld+json">
-            {`
-              {
-                "@context": "https://schema.org",
-                "@type": "TouristAttraction",
-                "name": "Ashokan Pillar",
-                "description": "Historical Ashokan Pillar located in Vaishali, Bihar.",
-                "image": "https://www.vaishalitourism.in/images/ashokan-pillar.jpg",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Vaishali",
-                  "addressRegion": "Bihar",
-                  "addressCountry": "IN"
-                },
-                "openingHours": "Mo-Su 09:00-18:00"
-              }
-            `}
-          </Script>
-        </head>
+        
       <body className="flex flex-col min-h-screen ">
         {/* Navbar fixed to top or static */}
         <Navbar />
