@@ -39,12 +39,13 @@ export default function Navbar() {
   <>
     <nav
       className={`${lato.className} fixed top-0 left-0 w-full z-50  backdrop-blur-md text-white shadow-lg`}
+      aria-label="Main Navigation"
     >
       <MobileTooltip/>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <Link rel='canonical' href={"/"}>
+          <Link href={"/"} aria-label="Vaishali Tourism Home">
             <Image
               src="/images/vaishalitourism-logo.svg"
               alt="Vaishali Tourism Logo"
@@ -101,6 +102,7 @@ export default function Navbar() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
               className="fixed inset-0 bg-black/50 z-40"
+              aria-hidden="true"
             />
 
             {/* Drawer */}
@@ -110,6 +112,7 @@ export default function Navbar() {
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 90, damping: 18 }}
               className="fixed top-0 right-0 h-screen w-64 sm:w-80 bg-black/70 backdrop-blur-xl shadow-2xl border-l border-white/20 z-50 rounded-l-3xl"
+              aria-label="Mobile Navigation"
             >
               <div className="flex justify-between items-center px-6 py-4 border-b border-white/20">
                 <h2 className="text-xl font-semibold text-green-400">Menu</h2>

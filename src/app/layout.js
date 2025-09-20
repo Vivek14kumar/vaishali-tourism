@@ -21,7 +21,33 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${mozillaHeadline.variable}`}>
       <Head>
+        <meta name="description" content={metadata.description} />
         <link rel="canonical" href="https://vaishalitourism.in/" />
+
+        {/* Open Graph / Social Media */}
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vaishalitourism.in/" />
+        <meta property="og:image" content="https://vaishalitourism.in/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        {/* Structured Data - JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "TravelAgency",
+              name: "Vaishali Tourism",
+              url: "https://vaishalitourism.in",
+              logo: "https://vaishalitourism.in/logo.png",
+              description:
+                "Discover Vaishali, a Buddhist pilgrimage and historic site in Bihar.",
+            }),
+          }}
+        />
+        
       </Head>
       <body className="flex flex-col min-h-screen ">
         {/* Navbar fixed to top or static */}

@@ -4,11 +4,11 @@ import { useState } from "react";
 import { X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 import { Lato, Allerta } from "next/font/google";
 
-const lato = Lato({subsets: ["latin"],weight: ["400", "700"],});
+const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 const allerta = Allerta({ subsets: ["latin"], weight: "400" });
-
 
 const images = [
   { src: "/images/ashokan-pillar.jpg", title: "Ashokan Pillar", desc: "A 3rd Century BC monument built by Emperor Ashoka." },
@@ -27,6 +27,35 @@ export default function Gallery() {
 
   return (
     <div className="min-h-screen mt-20">
+      <Head>
+        <title>Vaishali Tourism Gallery - Explore Heritage & Attractions</title>
+        <meta name="description" content="Gallery of Vaishali attractions: Ashokan Pillar, Buddha Stupa, Vaishali Museum, Jain Temple, and more." />
+        <link rel="canonical" href="https://vaishalitourism.in/gallery" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Vaishali Tourism Gallery - Explore Heritage & Attractions" />
+        <meta property="og:description" content="Gallery of Vaishali attractions: Ashokan Pillar, Buddha Stupa, Vaishali Museum, Jain Temple, and more." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vaishalitourism.in/gallery" />
+        <meta property="og:image" content="https://vaishalitourism.in/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ImageGallery",
+              "name": "Vaishali Tourism Gallery",
+              "url": "https://vaishalitourism.in/gallery",
+              "image": images.map(img => img.src),
+              "description": "Gallery of Vaishali attractions including historical monuments and cultural heritage."
+            }),
+          }}
+        />
+      </Head>
+
       {/* Hero Section */}
       <div className="relative h-[60vh] mb-12 rounded-xl">
         <Image
@@ -38,31 +67,29 @@ export default function Gallery() {
         />
         <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center rounded-xl">
           <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className={` mozilla-headline text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 drop-shadow-lg`}
-        >
-          Discover Vaishali
-        </motion.h1>
-
-        <p className={`${allerta.className} text-lg md:text-2xl text-white mt-4 max-w-2xl`}>
-          An ancient land of Buddha, Jainism & heritage – waiting for you to explore.
-        </p>
-
-        <div className="text-center mt-16">
-          <Link
-            href="/plan-your-visit"
-            className={` ${lato.className} px-6 py-3 shadow-xl bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold rounded-xl hover:scale-105 transition-transform duration-300`}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className={`mozilla-headline text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 drop-shadow-lg`}
           >
-            Plan Your Visit →
-          </Link>
-        </div>
+            Discover Vaishali
+          </motion.h1>
+          <p className={`${allerta.className} text-lg md:text-2xl text-white mt-4 max-w-2xl`}>
+            An ancient land of Buddha, Jainism & heritage – waiting for you to explore.
+          </p>
+          <div className="text-center mt-16">
+            <Link
+              href="/plan-your-visit"
+              className={`${lato.className} px-6 py-3 shadow-xl bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold rounded-xl hover:scale-105 transition-transform duration-300`}
+            >
+              Plan Your Visit →
+            </Link>
+          </div>
         </div>
       </div>
 
       {/* Gallery Grid */}
-      <div className="max-w-6xl mx-auto px-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+      <section aria-label="Vaishali Attractions Gallery" className="max-w-6xl mx-auto px-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
         {images.map((img, index) => (
           <motion.div
             key={index}
@@ -86,15 +113,16 @@ export default function Gallery() {
             </div>
           </motion.div>
         ))}
-      </div>
+      </section>
 
       {/* Lightbox */}
       {selectedImg && (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
-          <div className="relative max-w-3xl w-full">
+          <div className="relative max-w-3xl w-full mt-10">
             <button
               onClick={() => setSelectedImg(null)}
               className="absolute -top-10 right-0 text-white"
+              aria-label="Close Image"
             >
               <X size={32} />
             </button>
@@ -105,16 +133,11 @@ export default function Gallery() {
               height={200}
               className="w-full max-h-[80vh] object-contain rounded-xl"
             />
-            <p className="text-center text-white mt-4 text-lg font-semibold">
-              {selectedImg.title}
-            </p>
-            <p className="text-center text-gray-300 text-sm">
-              {selectedImg.desc}
-            </p>
+            <p className="text-center text-white mt-4 text-lg font-semibold">{selectedImg.title}</p>
+            <p className="text-center text-gray-300 text-sm">{selectedImg.desc}</p>
           </div>
         </div>
       )}
-      
     </div>
   );
 }

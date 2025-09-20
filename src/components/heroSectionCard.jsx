@@ -9,9 +9,9 @@ const allerta = Allerta({ subsets: ["latin"], weight: "400" });
 
 export default function HeroSectionCard() {
   const cards = [
-    { Image: "/images/vaishali.jpeg" },
-    { Image: "/images/ashok-piller.jpeg" },
-    { Image: "/images/relic.jpeg" },
+    { Image: "/images/vaishali.jpeg",alt: "Buddha Stupa"  },
+    { Image: "/images/ashok-piller.jpeg", alt: "Ashokan Pillar" },
+    { Image: "/images/relic.jpeg", alt: "Relic Stupa" },
   ];
 
   const [current, setCurrent] = useState(0);
@@ -81,7 +81,7 @@ export default function HeroSectionCard() {
       {/* Right Side - Heading */}
       <div className="w-full md:w-1/2 text-center md:text-left space-y-6 mt-6 md:mt-0">
         <h1 className={`mozilla-headline text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent`}>
-          Discover Vaishali
+          Vaishali Tourism - Explore Historical & Cultural Heritage in Bihar
         </h1>
         <p className={`${allerta.className} text-base sm:text-lg md:text-lg text-gray-600 max-w-md mx-auto md:mx-0`}>
           Explore the land of history, culture, and spirituality. From the relic
@@ -89,7 +89,7 @@ export default function HeroSectionCard() {
           waiting for you.
         </p>
         <div className="mt-6 sm:mt-8 flex gap-4 flex-wrap justify-center">
-          <Link rel='canonical' href={"/attractions"}>
+          <Link href={"/attractions"} rel='canonical'>
             <button
               onClick={() => scrollToSection("attractions")}
               className={` ${lato.className} px-6 sm:px-8 py-3 sm:py-4 text-lg sm:text-xl rounded-full shadow-xl bg-gradient-to-r from-green-600 to-green-400 text-white font-semibold hover:scale-105 transition-transform duration-300`}
@@ -97,7 +97,7 @@ export default function HeroSectionCard() {
               Explore More
             </button>
           </Link>
-          <Link rel='canonical' href={"/plan-your-visit"}>
+          <Link href={"/plan-your-visit"} rel='canonical'>
             <button
               //onClick={() => scrollToSection("plan")}
               className={`${lato.className} px-6 sm:px-8 py-3 sm:py-4 text-lg sm:text-xl rounded-full shadow-xl bg-white text-green-700 font-semibold hover:scale-105 transition-transform duration-300`}
