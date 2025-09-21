@@ -25,6 +25,13 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
         <link rel="canonical" href="https://vaishalitourism.in/" />
 
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        {/* Optional: PNG for better resolution */}
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+
+        {/*Apple touch icon for iOS*/}
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         {/* Open Graph / Social Media */}
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
