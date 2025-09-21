@@ -1,0 +1,16 @@
+# robots.txt for https://vaishalitourism.in
+
+User-agent: *
+Allow: /
+
+# Block search engines from crawling Next.js system paths
+Disallow: /_next/
+Disallow: /api/
+Disallow: /static/
+Disallow: /server-sitemap.xml
+
+# Sitemap (important for SEO)
+Sitemap: https://vaishalitourism.in/sitemap.xml
+
+# Optional: Crawl-delay (if server is weak, but usually not needed on Vercel)
+# Crawl-delay: 5

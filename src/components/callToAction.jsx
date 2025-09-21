@@ -12,6 +12,7 @@ export default function CallToAction() {
     <section
       id="cta"
       className="relative py-20 text-center text-white px-4 sm:px-6 lg:px-12 overflow-hidden rounded-3xl"
+      aria-labelledby="cta-heading"
     >
       {/* Background Video */}
       <video
@@ -19,6 +20,7 @@ export default function CallToAction() {
         loop
         muted
         playsInline
+        preload="metadata"
         className="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-3xl"
       >
         <source src="/videos/vaishali-video.mp4" type="video/mp4" />
@@ -47,7 +49,7 @@ export default function CallToAction() {
         awaits you with open arms.
       </motion.p>
       
-      <Link rel='canonical' href={"/attractions"}>    
+      <Link href={"/attractions"} rel='canonical'>    
         <motion.button
           whileHover={{ scale: 1.05 }}
           className={`${allerta.className} relative z-20 px-6 sm:px-8 py-3 sm:py-4 text-lg sm:text-xl rounded-full border border-white text-black font-semibold shadow-lg hover:bg-gray-100 transition backdrop-blur-xs`}
