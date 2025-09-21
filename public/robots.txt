@@ -8,6 +8,7 @@ Disallow: /_next/
 Disallow: /api/
 Disallow: /static/
 Disallow: /server-sitemap.xml
+Disallow: /sitemap.xml
 
 # Sitemap (important for SEO)
 Sitemap: https://vaishalitourism.in/sitemap.xml
