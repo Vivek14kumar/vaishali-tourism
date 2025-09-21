@@ -1,0 +1,11 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Block search engines from crawling Next.js internal paths
+Disallow: /_next/
+Disallow: /api
+
+# Sitemap locations (both HTTPS and HTTP)
+Sitemap: https://vaishalitourism.in/sitemap.xml
+Sitemap: http://vaishalitourism.in/sitemap.xml
