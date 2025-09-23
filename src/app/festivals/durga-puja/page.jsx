@@ -58,7 +58,7 @@ export default function DurgaPuja() {
           {
             title: "Artistic Pandals",
             desc: "Each neighborhood competes to design unique, themed pandals with breathtaking creativity.",
-            img: "/images/art-pandal.jpeg",
+            img: "/images/Art-pandal.jpeg",
           },
           {
             title: "Cultural Programs",
