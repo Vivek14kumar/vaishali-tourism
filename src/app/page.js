@@ -33,10 +33,10 @@ export default function Home() {
       {/*<HeroSection />*/}
       <HeroSectionCard />
 
-      {/* Durga Puja Highlight Section */}
+      {/* Durga Puja Highlight Section 
 <section className="relative py-12 max-w-6xl mx-auto px-4 md:px-8">
   <div className="grid md:grid-cols-2 gap-8 items-center">
-    {/* Image with overlay */}
+    {/* Image with overlay 
     <div className="relative w-full h-60 md:h-72 rounded-2xl overflow-hidden shadow-lg group">
       <Image
         src="/images/maa-durga.jpeg"
@@ -46,10 +46,10 @@ export default function Home() {
         priority
       />
       <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 via-blue-700/30 to-transparent" />
-      {/* Floating festival badge */} <div className="absolute top-4 left-4 bg-gradient-to-r from-red-500 to-yellow-500 text-white px-4 py-2 rounded-full shadow-lg text-sm font-semibold"> UNESCO Heritage </div>
+      {/* Floating festival badge  <div className="absolute top-4 left-4 bg-gradient-to-r from-red-500 to-yellow-500 text-white px-4 py-2 rounded-full shadow-lg text-sm font-semibold"> UNESCO Heritage </div>
     </div>
 
-    {/* Text Content */}
+    {/* Text Content 
     <div className="space-y-4">
       <h2 className="mozilla-headline text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
         Durga Puja –{" "}
@@ -64,7 +64,7 @@ export default function Home() {
         and celebrations, attracting visitors from around the world.
       </p>
 
-      {/* CTA Button */}
+      {/* CTA Button 
       <Link
         href="/festivals/durga-puja"
         className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold px-6 py-2 rounded-lg shadow hover:scale-105 hover:shadow-xl transition-all duration-300 text-sm md:text-base"
@@ -87,7 +87,7 @@ export default function Home() {
       </Link>
     </div>
   </div>
-</section>
+</section>*/}
 
 
       {/* Attractions Section */}
